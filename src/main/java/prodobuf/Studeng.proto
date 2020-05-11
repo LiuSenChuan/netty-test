@@ -1,0 +1,18 @@
+
+//指定语法是proto2
+syntax = "protot2";
+
+package protobuf;
+
+//文件选项,SPEED是加快文件的解析速度,不写的话默认就是SPEED,另外还有CODE_SIZE,LIFE_RUNTIME
+option optimize_for = SPEED;
+//输出文件路径
+option java_package = "protobuf";
+//输出文件名
+option java_outer_classname = "StudentInfo";
+
+message Student {
+    required string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+}
